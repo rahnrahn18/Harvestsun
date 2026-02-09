@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Harvest Valley RPG (Android)
 
-# Run and deploy your AI Studio app
+This is an Android wrapper for the Harvest Valley RPG web application.
 
-This contains everything you need to run your app locally.
+## Project Structure
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Gf3yE1n4cB0tKepxk-FrKrXFB4-RYkMk
+*   `app/`: Android application module.
+*   `web_src/`: Original web application source code.
 
-## Run Locally
+## How to Build (AndroidIDE)
 
-**Prerequisites:**  Node.js
+1.  Open this project in AndroidIDE.
+2.  Wait for the project to sync.
+3.  Click "Run" to build and install the APK.
 
+## Development
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The web assets are pre-built and located in `app/src/main/assets`.
+If you modify the web source code in `web_src/`:
+
+1.  Navigate to `web_src/`.
+2.  Run `npm install`.
+3.  Run `npm run build`.
+4.  Copy the contents of `web_src/dist/` to `app/src/main/assets/`.
+    *   Example command: `cp -r web_src/dist/* app/src/main/assets/`
+5.  Rebuild the Android project.
+
+## Requirements
+
+*   Android SDK 35
+*   Kotlin 2.1.0
+*   Android Gradle Plugin 8.5.0
+*   Gradle Wrapper 8.13-bin
