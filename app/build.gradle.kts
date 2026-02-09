@@ -15,9 +15,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        ndk {
-            // abiFilters.add("arm64-v8a") // Optional, but user specified arm64-v8a
-        }
     }
 
     buildTypes {
@@ -28,21 +25,19 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     buildFeatures {
         viewBinding = true
     }
 
-    // Strict build tools version
     buildToolsVersion = "35.0.1"
-    ndkVersion = "27.1.12297006"
 }
 
 dependencies {
