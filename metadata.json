@@ -1,0 +1,5 @@
+{
+  "name": "Harvest Valley RPG",
+  "description": "A fully functional farming simulation RPG prototype featuring crop cycles, economy, inventory management, and AI-powered NPC interactions using Gemini.",
+  "requestFramePermissions": []
+}
